@@ -50,9 +50,12 @@ body {
 }
 
 .glass-btn:hover, .glass-btn-small:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(0, 51, 77, 0.7);
+    color: #66ccff;
     transform: scale(1.05);
-    box-shadow: 0 0 8px rgba(0, 170, 255, 0.8);
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.8);
+    border-color: rgba(102, 204, 255, 0.8);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Glass Input */
@@ -96,12 +99,17 @@ body {
 /* Skills */
 .skill-box {
     padding: 15px;
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(15, 30, 45, 0.7);
     border-radius: 15px;
     margin-bottom: 15px;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: background 0.3s ease, opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.skill-box:hover {
+    background: rgba(5, 10, 20, 0.9);
+    color: #66ccff;
 }
 
 .skill-box.animate {
@@ -113,8 +121,17 @@ body {
 .section#projects .glass-card {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: background 0.3s ease, opacity 0.6s ease-out, transform 0.6s ease-out;
+    background: rgba(15, 30, 45, 0.7);
 }
+
+.section#projects .glass-card:hover {
+    background: rgba(5, 10, 20, 0.9);
+    box-shadow: 0 0 15px rgba(102, 204, 255, 0.7);
+    cursor: pointer;
+    color: #66ccff;
+}
+
 .section#projects .glass-card.animate {
     opacity: 1;
     transform: translateY(0);
