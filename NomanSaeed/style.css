@@ -1,0 +1,76 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Glass Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-btn, .glass-btn-small {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.glass-btn:hover, .glass-btn-small:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.glass-input {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* Navbar */
+.glass-nav {
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* Hero */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #111, #000);
+}
+
+.hero-card {
+    padding: 60px;
+    border-radius: 25px;
+}
+
+.highlight {
+    color: #0af;
+}
+
+/* Skills */
+.skill-box {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
