@@ -56,6 +56,10 @@ body {
     align-items: center;
     justify-content: center;
     background: radial-gradient(circle at top, #111, #000);
+    background-image: url(./assets/images/image1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-card {
