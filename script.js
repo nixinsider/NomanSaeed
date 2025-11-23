@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    // Reset visibility on page load: show login form, hide main content
+    $("#loginForm").removeClass("d-none");
+    $("#mainContent").addClass("d-none");
+
     $("#loginForm form").on("submit", function (e) {
         e.preventDefault();
 
@@ -35,11 +39,16 @@ $(document).ready(function() {
     // Smooth scrolling
     $("a.nav-link").on("click", function (e) {
         if (this.hash !== "") {
+            if ($("#loginForm").is(":visible")) {
+                // If login form is visible, disable smooth scrolling
+                return;
+            }
             e.preventDefault();
             const hash = this.hash;
+            const navbarHeight = $(".navbar").outerHeight() || 70;
 
             $("html, body").animate(
-                { scrollTop: $(hash).offset().top - 70 },
+                { scrollTop: $(hash).offset().top - navbarHeight },
                 800
             );
         }
