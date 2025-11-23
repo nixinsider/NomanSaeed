@@ -21,6 +21,14 @@ body {
     margin-bottom: 20px;
     color: #fff;
 }
+/* Disable NavLinks */
+.disable-nav-link{
+    pointer-events: none;
+    cursor: not-allowed;
+    text-decoration: none !important;
+    color: grey !important;
+}
+
 
 /* Glass Effect */
 .glass-card {

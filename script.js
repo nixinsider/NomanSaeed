@@ -3,6 +3,9 @@ $(document).ready(function() {
     $("#loginForm").removeClass("d-none");
     $("#mainContent").addClass("d-none");
 
+    // Disable nav links initially
+    $(".nav-link").addClass("disabled-nav-link");
+
     $("#loginForm form").on("submit", function (e) {
         e.preventDefault();
 
@@ -16,6 +19,8 @@ $(document).ready(function() {
         if (username === "admin" && password === "0130@Noman") {
             $("#loginForm").addClass("d-none");
             $("#mainContent").removeClass("d-none");
+            // Enable nav links after login success
+            $(".nav-link").removeClass("disabled-nav-link");
         } else {
             errorMessage.text("Invalid username or password. Please try again.").show();
         }
@@ -39,6 +44,11 @@ $(document).ready(function() {
     // Smooth scrolling
     $("a.nav-link").on("click", function (e) {
         if (this.hash !== "") {
+            // Prevent clicks on nav-links if disabled
+            if ($(this).hasClass("disabled-nav-link")) {
+                e.preventDefault();
+                return;
+            }
             if ($("#loginForm").is(":visible")) {
                 // If login form is visible, disable smooth scrolling
                 return;
