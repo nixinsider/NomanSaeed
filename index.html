@@ -57,15 +57,18 @@
                         placeholder="Enter your username or email" required />
                 </div>
 
-                <div class="mb-4">
+                <div class="mb-4 position-relative">
                     <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control glass-input" id="password"
                         placeholder="Enter your password" required />
+                    <button type="button" id="toggle-password-visibility" style="position: absolute; top: 38px; right: 12px; border: none; background: transparent; cursor: pointer; outline: none; padding: 0;">
+                        <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="gray" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/><circle cx="12" cy="12" r="2.5"/></svg>
+                    </button>
                 </div>
 
                 <div id="login-error" class="text-danger mb-3" style="display: none;"></div>
 
-                <button type="submit" class="btn glass-btn w-100">Login</button>
+                <button type="submit" class="btn glass-btn w-100" id="loginButton">Login</button>
             </form>
         </div>
     </section>

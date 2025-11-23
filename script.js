@@ -17,6 +17,21 @@ $(document).ready(function() {
         }
     });
 
+    // Toggle password visibility
+    $("#toggle-password-visibility").on("click", function() {
+        const passwordInput = $("#password");
+        const eyeIcon = $("#eye-icon");
+        const type = passwordInput.attr("type") === "password" ? "text" : "password";
+        passwordInput.attr("type", type);
+
+        // Swap eye icon fill color for visibility state
+        if(type === "text") {
+            eyeIcon.attr("fill", "black");
+        } else {
+            eyeIcon.attr("fill", "gray");
+        }
+    });
+
     // Smooth scrolling
     $("a.nav-link").on("click", function (e) {
         if (this.hash !== "") {
