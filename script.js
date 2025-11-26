@@ -16,7 +16,7 @@ $(document).ready(function() {
         // Clear previous error message
         errorMessage.text("").hide();
 
-        if (username === "admin" && password === "0130@Noman") {
+        if (username === "admin" && password === "0130@NmN") {
             $("#loginForm").addClass("d-none");
             $("#mainContent").removeClass("d-none");
             // Enable nav links after login success
