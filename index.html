@@ -217,22 +217,22 @@
                 <div class="glass-card p-4">
                     <h2 class="section-title">Contact Me</h2>
 
-                    <form>
+                    <form id="contactForm">
                         <div class="mb-3">
                             <label class="form-label">Your Name</label>
-                            <input class="form-control glass-input" type="text">
+                            <input class="form-control glass-input" type="text" name="from_name">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input class="form-control glass-input" type="email">
+                            <input class="form-control glass-input" type="email" name="from_email">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Message</label>
-                            <textarea class="form-control glass-input" rows="4"></textarea>
+                            <textarea class="form-control glass-input" rows="4" name="message"></textarea>
                         </div>
-
+                        <p id="status"></p>
                         <button class="btn glass-btn" type="submit">Send Message</button>
                     </form>
                 </div>
@@ -256,7 +256,8 @@
     <!-- <div id="whatsapp-button" title="Chat on WhatsApp">
         <img src="assets/images/whatsApp.png" alt="WhatsApp" />
     </div> -->
-
+    <!-- Emailjs SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 

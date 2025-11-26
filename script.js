@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Reset visibility on page load: show login form, hide main content
     $("#loginForm").removeClass("d-none");
     $("#mainContent").addClass("d-none");
@@ -27,14 +27,14 @@ $(document).ready(function() {
     });
 
     // Toggle password visibility
-    $("#toggle-password-visibility").on("click", function() {
+    $("#toggle-password-visibility").on("click", function () {
         const passwordInput = $("#password");
         const eyeIcon = $("#eye-icon");
         const type = passwordInput.attr("type") === "password" ? "text" : "password";
         passwordInput.attr("type", type);
 
         // Swap eye icon fill color for visibility state
-        if(type === "text") {
+        if (type === "text") {
             eyeIcon.attr("fill", "black");
         } else {
             eyeIcon.attr("fill", "gray");
@@ -59,14 +59,14 @@ $(document).ready(function() {
 
             $("html, body").animate(
                 { scrollTop: $(hash).offset().top - navbarHeight },
-                800
+                300
             );
         }
     });
 
     // WhatsApp button click handler
     $("#whatsapp-button").on("click", function () {
-        const phoneNumber = "+923245943220"; 
+        const phoneNumber = "+923245943220";
         const url = `https://wa.me/${phoneNumber}`;
         window.open(url, "_blank");
     });
@@ -103,7 +103,21 @@ $(document).ready(function() {
             }
         });
     }
+    // sending email function
+    (function () {
+        emailjs.init("mrcJjBHYk44WZlkJS");
+    })();
 
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_695yzff", "template_r3l2a9h", this)
+            .then(() => {
+                document.getElementById("status").innerText = "Message sent!";
+            }, (error) => {
+                document.getElementById("status").innerText = "Failed: " + JSON.stringify(error);
+            });
+    });
     // Initial check
     document.addEventListener('DOMContentLoaded', animateOnScroll);
 
